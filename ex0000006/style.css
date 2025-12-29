@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(68, 68, 199);
+    position: relative;
+    height: 97vh;
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+input {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Remove as setas dos inputs numéricos */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input#txt1,
+input#txt2 {
+    width: 50px;
+}
