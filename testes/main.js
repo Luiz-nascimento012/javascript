@@ -1,9 +1,20 @@
-var n1 = parseFloat(window.prompt("digite um número"))
+var bloco1 = document.querySelector('div.p1')
 
-var n2 = parseFloat(window.prompt("digite outro número"))
+bloco1.addEventListener('click', clicar)
 
-var resto = n1 % n2
+var bloco2 = document.querySelector('div.p2')
 
-window.alert(`o resultado dessa merda é ${resto}`)
+bloco2.addEventListener('click', clicar02)
+
+function clicar() {
+    bloco1.innerHTML = 'morra!'
+    bloco1.style.background = 'red'
+}
+
+function clicar02() {
+    bloco2.innerHTML = 'viva!'
+    bloco2.style.background = 'green'
+}
+
 
 

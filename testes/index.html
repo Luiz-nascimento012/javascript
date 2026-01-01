@@ -4,8 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            height: 98vh;
+            position: relative;
+        }
+
+        div.p1, div.p2 {
+            background-color: gray;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            margin: 20px;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        main {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </head>
 <body>
+    <main>
+        <div class="p1"><p>penis 1</p></div>
+        <div class="p2"><p>penis 2</p></div>
+    </main>
     <script src="main.js"></script>
 </body>
 </html>
