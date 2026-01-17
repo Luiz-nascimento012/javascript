@@ -1,20 +1,7 @@
-var bloco1 = document.querySelector('div.p1')
+var p = document.querySelector('p.para')
 
-bloco1.addEventListener('click', clicar)
+p.addEventListener('click', mudar)
 
-var bloco2 = document.querySelector('div.p2')
-
-bloco2.addEventListener('click', clicar02)
-
-function clicar() {
-    bloco1.innerHTML = 'morra!'
-    bloco1.style.background = 'red'
+function mudar() {
+    p.innerText('penis')
 }
-
-function clicar02() {
-    bloco2.innerHTML = 'viva!'
-    bloco2.style.background = 'green'
-}
-
-
-

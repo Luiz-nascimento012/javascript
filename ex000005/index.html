@@ -1,15 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Botão com Gradiente</title>
+<style>
+    body {
+        background-color: brown;
+        color: white;
+        font: normal 1.5em Arial;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    button {
+        padding: 15px 30px;
+        font-size: 1.2em;
+        cursor: pointer;
+        border: none;
+        border-radius: 8px;
+        background-color: #333;
+        color: white;
+        transition: all 0.3s ease;
+    }
+
+    /* Classe que aplica gradiente no texto */
+    .gradient-text {
+        background: linear-gradient(to right, #ff0000, #ffff00);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+</style>
 </head>
 <body>
-    <h1>iniciando o DOM</h1>
-    <p id="bota">aqui será o resultado</p>
-    <div id="bota">clique em mim</div>
-    <script src="main.js"></script>
+
+    <button id="meuBotao">Clique aqui</button>
+
+    <script>
+        const botao = document.getElementById("meuBotao");
+
+        botao.addEventListener("click", () => {
+            botao.classList.toggle("gradient-text");
+        });
+    </script>
+
 </body>
 </html>

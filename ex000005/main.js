@@ -1,6 +1,14 @@
+var bota = document.querySelector('div#bota')
 
-var p2 = window.document.getElementById("bota")
+bota.addEventListener('click', changeGradient)
 
-p2.style.display = 'block'
-p2.style.padding = '20px'
-p2.style.background = 'black'
+function changeGradient() {
+  const paragraph = document.getElementById('myParagraph');
+  // Define um novo gradiente diretamente na propriedade style via JS
+  // Você pode gerar gradientes aleatórios ou predefinidos
+  
+  const newGradient = 'linear-gradient(to right, #00ff00, #ffff00)'; // Novo gradiente (verde para amarelo)
+
+  // Aplica o novo gradiente
+  paragraph.style.backgroundImage = newGradient;
+}

@@ -7,5 +7,10 @@ body {
 div.bota {
     display: block;
     padding: 200px;
-    text
+}
+
+p.gradient-text {
+    background: linear-gradient(to right, #ff0000, #ffff00);
+    -webkit-background-clip: text; /* necessário para navegadores baseados em WebKit */
+    -webkit-text-fill-color: transparent; /* deixa o texto transparente para mostrar o fundo */
 }
