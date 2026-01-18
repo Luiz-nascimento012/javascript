@@ -1,7 +1,7 @@
-var p = document.querySelector('p.para')
+var p = document.querySelector('div.para')
 
 p.addEventListener('click', mudar)
 
 function mudar() {
-    p.innerText('penis')
+    p.innerHTML = 'penis'
 }
