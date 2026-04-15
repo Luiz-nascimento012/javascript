@@ -1,0 +1,93 @@
+
+:root {
+    --corpo: #f1f1f1;
+    --cor-destaque: #7A1113;
+    --cor-des-sec: #62CF80;
+    --texto: #000000;
+    --texto-sec: #ffffff;
+}
+
+@media screen and (min-width: 667px) and (max-width: 768px) {
+    ul.changelog {
+        width: 100%;
+    }
+
+    ul.changelog::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    ul.changelog li.changelog-itens {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        gap: 20px;
+        margin-left: 0;
+    }
+
+    li.changelog-itens::before {
+        display: none;
+    }
+
+    li.changelog-itens h2.data {
+        width: 50%;
+        text-align: end;
+    }
+
+    li.changelog-itens p {
+        text-align: justify;
+        width: 50%;
+        margin-left: 20px;
+    }
+
+    li.changelog-itens h2.data::after {
+        position: absolute;
+        background-color: var(--cor-destaque);
+        content: "";
+        height: 30px;
+        width: 30px;
+        margin-left: 5px;
+        border-radius: 50%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    ul.changelog {
+        width: 80%;
+    }
+    
+    ul.changelog::before {
+        left: 50%;
+    }
+
+    ul.changelog li.changelog-itens {
+        width: calc(50% - 20px);
+        text-align: center;
+    }
+
+    ul.changelog li.changelog-itens:nth-child(even) {
+        align-self: flex-end;
+    }
+
+    ul.changelog li.changelog-itens:nth-child(odd) {
+        align-self: flex-start;
+        margin-right: 20px;
+        margin-left: 0;
+    }
+
+     ul.changelog li.changelog-itens:nth-child(odd)::before {
+        display: none;
+     }
+
+     ul.changelog li.changelog-itens:nth-child(odd)::after {
+        position: absolute;
+        background-color: var(--cor-destaque);
+        content: "";
+        top: 0;
+        right: -36px;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+     }
+}
