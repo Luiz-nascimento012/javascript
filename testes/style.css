@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+div.retro {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-flow: column-reverse nowrap;
+    align-items: center;
+    height: 100%;
+}
+
+
+div.retro::before {
+    content: "";
+    position: absolute;
+    background-color: brown;
+    width: 2px;
+    height: 50%;
+    z-index: -1;
+}
+
+div.rota {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 30%;
+    align-items: center;
+    padding: 10px;
+}
+
+div.rota.row {
+ display: flex;
+ margin-right: auto;
+ flex-flow: row nowrap;
+ width: 100%;
+}
+
+div.rota.row button.text-summoner {
+    margin: 0 10px 0 5px
+}
+
+div.rota.row button.text-summoner:hover {
+    transform: scale(1);
+    cursor: pointer;
+}
+
+div.rota.row p.data {
+    margin-bottom: 0;
+}
+
+div.rota.row:has(button.text-summoner:hover) p.data {
+    transform: scale(1);
+    cursor: pointer;
+}
+
+div.rota p.data {
+    color: rgb(42, 165, 165);
+    background-color: brown;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+button.text-summoner {
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-radius: 50%;
+    background-color: brown;
+}
+
+button.text-summoner:hover {
+    background-color: rgb(42, 165, 165);
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+div.rota:has(button.text-summoner:hover) p.data {
+    color: brown;
+    background-color: rgb(42, 165, 165);;
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+div.rota.row p.resto {
+    width: 150px;
+    height: 20px;
+    align-self: flex-end;
+    overflow: hidden;
+}
+
+p.resto {
+    display: none;
+    text-align: justify;
+}
+
+div.rota.row p.resto:hover {
+    overflow: visible;
+}
